@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Check } from 'lucide-react';
-import { FadeIn } from '../components/FadeIn';
+import FadeIn from '../components/FadeIn';
 
 export default function Pricing () {
   return (

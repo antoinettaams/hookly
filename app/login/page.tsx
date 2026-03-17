@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FadeIn } from '../components/FadeIn';
+import FadeIn from '../components/FadeIn';
 import { ArrowLeft } from 'lucide-react';
 
 export default function Login(){

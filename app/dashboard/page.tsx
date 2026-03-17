@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Zap, Clock, Video, Plus } from 'lucide-react';
-import { FadeIn } from '../components/FadeIn';
+import FadeIn from '../components/FadeIn';
 
 export default function Dashboard () {
   return (

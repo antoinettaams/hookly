@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { 
   Zap, 
   Clock, 
@@ -17,7 +18,9 @@ import {
   Sparkles,
   Play
 } from 'lucide-react';
-import { FadeIn } from './components/FadeIn';
+
+// Import dynamique de FadeIn avec désactivation du SSR
+const FadeIn = dynamic(() => import('./components/FadeIn'), { ssr: false });
 
 export default function Landing() {
   const pathname = usePathname();
@@ -63,11 +66,11 @@ export default function Landing() {
           
           <FadeIn delay={0.3}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
-              <Link href="/register" className="w-full sm:w-auto bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white px-3 sm:px-2 py-3 sm:py-2 rounded-xl font-bold text-sm sm:text-base transition-all shadow-[0_0_20px_rgba(108,77,255,0.4)] hover:shadow-[0_0_30px_rgba(108,77,255,0.6)] flex items-center justify-center gap-2">
+              <Link href="/register" className="w-full sm:w-auto bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all shadow-[0_0_20px_rgba(108,77,255,0.4)] hover:shadow-[0_0_30px_rgba(108,77,255,0.6)] flex items-center justify-center gap-2">
                 <Zap size={18} className="sm:w-5 sm:h-5" />
                 <span className="whitespace-normal sm:whitespace-nowrap">Générer gratuitement</span>
               </Link>
-              <a href="#examples" className="w-full sm:w-auto bg-transparent border border-white/20 hover:bg-white/5 text-white px-3 sm:px-2 py-3 sm:py-2 rounded-xl font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2">
+              <a href="#examples" className="w-full sm:w-auto bg-transparent border border-white/20 hover:bg-white/5 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2">
                 <Play size={18} className="sm:w-5 sm:h-5" />
                 <span>Voir exemples</span>
               </a>
@@ -230,7 +233,7 @@ export default function Landing() {
 
           <FadeIn delay={0.4}>
             <div className="text-center px-4">
-              <Link href="/register" className="inline-block w-full sm:w-auto bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white px-6 sm:px-5 py-3 sm:py-3 rounded-xl font-bold text-sm sm:text-base transition-all shadow-[0_0_20px_rgba(108,77,255,0.4)]">
+              <Link href="/register" className="inline-block w-full sm:w-auto bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all shadow-[0_0_20px_rgba(108,77,255,0.4)]">
                 Générer mes propres hooks
               </Link>
             </div>
@@ -292,14 +295,14 @@ export default function Landing() {
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 md:mb-10 flex-1">
                   <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
                     <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
-                    <span>05 hooks par mois</span>
+                    <span>05 hooks par MOIS</span>
                   </li>
                   <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
                     <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
                     <span>Plateformes principales</span>
                   </li>
                 </ul>
-                <Link href="/register" className="w-full text-center block bg-transparent border border-white/20 hover:bg-white/5 text-white py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-base transition-all">
+                <Link href="/register" className="w-full text-center block bg-transparent border border-white/20 hover:bg-white/5 text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all">
                   Commencer gratuitement
                 </Link>
               </div>
@@ -333,7 +336,7 @@ export default function Landing() {
                     <span>Export scripts</span>
                   </li>
                 </ul>
-                <Link href="/register" className="w-full text-center block bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-base transition-all shadow-[0_0_20px_rgba(108,77,255,0.4)]">
+                <Link href="/register" className="w-full text-center block bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all shadow-[0_0_20px_rgba(108,77,255,0.4)]">
                   Passer en Pro
                 </Link>
               </div>
@@ -357,7 +360,7 @@ export default function Landing() {
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <Link href="/register" className="inline-flex w-full sm:w-auto bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white px-4 sm:px-4 md:px-5 py-3 sm:py-2 md:py-3 rounded-xl font-bold text-sm sm:text-base md:text-lg transition-all shadow-[0_0_30px_rgba(108,77,255,0.5)] items-center justify-center gap-2 sm:gap-3 mx-auto">
+            <Link href="/register" className="inline-flex w-full sm:w-auto bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg transition-all shadow-[0_0_30px_rgba(108,77,255,0.5)] items-center justify-center gap-2 sm:gap-3 mx-auto">
               <Zap size={20} className="sm:w-6 sm:h-6" />
               Générer gratuitement
             </Link>
