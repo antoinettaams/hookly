@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
-import dynamic from 'next/dynamic';
 import { 
   Zap, 
   Clock, 
@@ -18,11 +17,9 @@ import {
   Sparkles,
   Play
 } from 'lucide-react';
+import FadeIn from './components/FadeIn';
 
-// Import dynamique de FadeIn avec désactivation du SSR
-const FadeIn = dynamic(() => import('./components/FadeIn'), { ssr: false });
-
-export default function Landing() {
+function LandingContent() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -295,7 +292,7 @@ export default function Landing() {
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 md:mb-10 flex-1">
                   <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
                     <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
-                    <span>05 hooks par MOIS</span>
+                    <span>10 hooks par jour</span>
                   </li>
                   <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
                     <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
@@ -315,7 +312,7 @@ export default function Landing() {
                   Le plus populaire
                 </div>
                 <div className="mb-4 sm:mb-6 md:mb-8 mt-4 sm:mt-6">
-                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold">2000 FCFA</span>
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold">9€</span>
                   <span className="text-white/40 text-sm sm:text-base font-semibold">/mois</span>
                 </div>
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 md:mb-10 flex-1">
@@ -368,5 +365,13 @@ export default function Landing() {
         </div>
       </section>
     </main>
+  );
+}
+
+export default function Landing() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+      <LandingContent />
+    </Suspense>
   );
 }
