@@ -2,13 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'; // ← Ajout pour détecter la route
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname(); // ← Récupère la route actuelle
+  const pathname = usePathname();
 
   // Liste des routes où la navbar ne doit PAS s'afficher
   const hideNavbarRoutes = [
@@ -16,6 +16,11 @@ export default function Navbar() {
     '/login',
     '/register',
     '/forgot-password',
+    '/generator',
+    '/pricing',
+    '/hooks',
+    '/settings',
+    '/profile'
   ];
 
   // Vérifie si la route actuelle doit cacher la navbar
@@ -64,26 +69,26 @@ export default function Navbar() {
     <>
       <nav className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
         isScrolled 
-          ? 'bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/5 py-2' 
+          ? 'bg-[var(--bg-primary)]/90 backdrop-blur-md border-b border-[var(--border-color)] py-2' 
           : 'bg-transparent py-4'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 z-[70]">
-            <span className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+            <span className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-primary)]">
               H<span className="text-[#6C4DFF]">o</span>okly
             </span>
           </Link>
 
           {/* Menu Desktop */}
-          <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-white/70">
-            <Link href="/#features" className="hover:text-white transition-colors">
+          <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-[var(--text-secondary)]">
+            <Link href="/#features" className="hover:text-[var(--text-primary)] transition-colors">
               Fonctionnalités
             </Link>
-            <Link href="/#examples" className="hover:text-white transition-colors">
+            <Link href="/#examples" className="hover:text-[var(--text-primary)] transition-colors">
               Exemples
             </Link>
-            <Link href="/#pricing" className="hover:text-white transition-colors">
+            <Link href="/#pricing" className="hover:text-[var(--text-primary)] transition-colors">
               Tarifs
             </Link>
           </div>
@@ -101,7 +106,7 @@ export default function Navbar() {
           {/* Bouton Hamburger Mobile */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white transition-colors z-[70] p-2"
+            className="md:hidden text-[var(--text-primary)] transition-colors z-[70] p-2"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -110,7 +115,7 @@ export default function Navbar() {
 
         {/* Menu Mobile */}
         <div 
-          className={`fixed inset-0 bg-[#0A0A0A]/98 backdrop-blur-xl z-[50] transition-all duration-300 md:hidden ${
+          className={`fixed inset-0 bg-[var(--bg-primary)]/98 backdrop-blur-xl z-[50] transition-all duration-300 md:hidden ${
             isMenuOpen 
               ? 'opacity-100 visible' 
               : 'opacity-0 invisible pointer-events-none'
@@ -120,21 +125,21 @@ export default function Navbar() {
             <div className="flex flex-col gap-4">
               <Link 
                 href="/#features" 
-                className="text-2xl font-bold text-white py-4 border-b border-white/5"
+                className="text-2xl font-bold text-[var(--text-primary)] py-4 border-b border-[var(--border-color)]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Fonctionnalités
               </Link>
               <Link 
                 href="/#examples" 
-                className="text-2xl font-bold text-white py-4 border-b border-white/5"
+                className="text-2xl font-bold text-[var(--text-primary)] py-4 border-b border-[var(--border-color)]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Exemples
               </Link>
               <Link 
                 href="/#pricing" 
-                className="text-2xl font-bold text-white py-4 border-b border-white/5"
+                className="text-2xl font-bold text-[var(--text-primary)] py-4 border-b border-[var(--border-color)]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Tarifs
@@ -151,7 +156,7 @@ export default function Navbar() {
               </Link>
               
               <div className="text-center">
-                <p className="text-white/40 text-base">
+                <p className="text-[var(--text-secondary)] text-base">
                   Déjà un compte ?{' '}
                   <Link 
                     href="/login" 
@@ -168,4 +173,4 @@ export default function Navbar() {
       </nav>
     </>
   );
-};
+}

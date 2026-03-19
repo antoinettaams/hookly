@@ -56,7 +56,7 @@ function LandingContent() {
           </FadeIn>
           
           <FadeIn delay={0.2}>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/60 mb-4 sm:mb-6 max-w-2xl mx-auto leading-relaxed px-4">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[var(--text-secondary)] mb-4 sm:mb-6 max-w-2xl mx-auto leading-relaxed px-4">
               L'outil IA qui crée des hooks vidéos de quelques secondes irrésistibles pour stopper le scroll sur TikTok, Reels et YouTube.
             </p>
           </FadeIn>
@@ -67,7 +67,7 @@ function LandingContent() {
                 <Zap size={18} className="sm:w-5 sm:h-5" />
                 <span className="whitespace-normal sm:whitespace-nowrap">Générer gratuitement</span>
               </Link>
-              <a href="#examples" className="w-full sm:w-auto bg-transparent border border-white/20 hover:bg-white/5 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2">
+              <a href="#examples" className="w-full sm:w-auto bg-transparent border border-[var(--border-color)] hover:bg-white/5 text-[var(--text-primary)] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2">
                 <Play size={18} className="sm:w-5 sm:h-5" />
                 <span>Voir exemples</span>
               </a>
@@ -76,9 +76,9 @@ function LandingContent() {
 
           <FadeIn delay={0.5}>
             <div className="mt-8 sm:mt-10 md:mt-12 relative mx-auto max-w-5xl px-2 sm:px-4">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0A0A] z-10 pointer-events-none" />
-              <div className="relative rounded-xl sm:rounded-2xl border border-white/10 bg-[#111111] shadow-[0_0_50px_rgba(108,77,255,0.15)] overflow-hidden">
-                <div className="h-10 sm:h-12 border-b border-white/5 flex items-center px-3 sm:px-4 gap-2 bg-black/20">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--bg-primary)] z-10 pointer-events-none" />
+              <div className="relative rounded-xl sm:rounded-2xl border border-[var(--border-color)] bg-[var(--bg-secondary)] shadow-[0_0_50px_rgba(108,77,255,0.15)] overflow-hidden">
+                <div className="h-10 sm:h-12 border-b border-[var(--border-color)] flex items-center px-3 sm:px-4 gap-2 bg-black/20">
                   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500/50" />
                   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500/50" />
                   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500/50" />
@@ -86,16 +86,16 @@ function LandingContent() {
                 <div className="p-4 sm:p-6 md:p-8 grid grid-cols-1 md:grid-cols-[300px_1fr] gap-4 sm:gap-6 md:gap-8 text-left">
                   <div className="space-y-4 sm:space-y-6">
                     <div>
-                      <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-1 sm:mb-2">Sujet</div>
-                      <div className="bg-black/40 border border-white/5 rounded-lg p-2 sm:p-3 text-xs sm:text-sm text-white/80 break-words">
+                      <div className="text-xs font-semibold text-[var(--text-secondary)] uppercase tracking-wider mb-1 sm:mb-2">Sujet</div>
+                      <div className="bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg p-2 sm:p-3 text-xs sm:text-sm text-[var(--text-primary)] break-words">
                         Comment optimiser son sommeil
                       </div>
                     </div>
                     <div>
-                      <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-1 sm:mb-2">Plateforme</div>
+                      <div className="text-xs font-semibold text-[var(--text-secondary)] uppercase tracking-wider mb-1 sm:mb-2">Plateforme</div>
                       <div className="flex flex-wrap gap-2">
                         <div className="bg-[#6C4DFF]/20 border border-[#6C4DFF]/30 text-[#6C4DFF] rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 text-xs font-semibold">TikTok</div>
-                        <div className="bg-black/40 border border-white/5 text-white/60 rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 text-xs font-semibold">Reels</div>
+                        <div className="bg-[var(--input-bg)] border border-[var(--border-color)] text-[var(--text-secondary)] rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 text-xs font-semibold">Reels</div>
                       </div>
                     </div>
                     <button className="w-full bg-[#6C4DFF] text-white rounded-lg py-2 sm:py-3 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(108,77,255,0.3)] pointer-events-none">
@@ -104,18 +104,18 @@ function LandingContent() {
                     </button>
                   </div>
                   <div className="space-y-3 sm:space-y-4">
-                    <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-1 sm:mb-2">Résultats (3/10)</div>
+                    <div className="text-xs font-semibold text-[var(--text-secondary)] uppercase tracking-wider mb-1 sm:mb-2">Résultats (3/10)</div>
                     {[
                       "[Vidéo] Zoom rapide : Tu dors 8h par nuit mais tu es toujours fatigué ?",
                       "[Vidéo] Transition dynamique : J'ai testé la routine du PDG d'Apple...",
                       "[Vidéo] Tasse de café jetée : Arrête de boire du café le matin."
                     ].map((hook, i) => (
-                      <div key={i} className="bg-black/40 border border-white/5 rounded-lg sm:rounded-xl p-3 sm:p-4 flex gap-3 items-start group hover:border-[#6C4DFF]/30 transition-colors">
+                      <div key={i} className="bg-[var(--input-bg)] border border-[var(--border-color)] rounded-lg sm:rounded-xl p-3 sm:p-4 flex gap-3 items-start group hover:border-[#6C4DFF]/30 transition-colors">
                         <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#6C4DFF]/10 text-[#6C4DFF] flex items-center justify-center font-bold text-xs sm:text-sm shrink-0">
                           {i + 1}
                         </div>
-                        <p className="text-xs sm:text-sm text-white/90 leading-relaxed flex-1 break-words">{hook}</p>
-                        <button className="text-white/20 group-hover:text-[#6C4DFF] transition-colors shrink-0">
+                        <p className="text-xs sm:text-sm text-[var(--text-primary)] leading-relaxed flex-1 break-words">{hook}</p>
+                        <button className="text-[var(--text-secondary)] group-hover:text-[#6C4DFF] transition-colors shrink-0">
                           <Copy size={14} className="sm:w-4 sm:h-4" />
                         </button>
                       </div>
@@ -129,12 +129,12 @@ function LandingContent() {
       </section>
 
       {/* PROBLEM SECTION */}
-      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[#050505]">
+      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[var(--bg-primary)]">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">Pourquoi tes vidéos ne décollent pas ?</h2>
-              <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-2xl mx-auto px-4">
+              <p className="text-sm sm:text-base md:text-lg text-[var(--text-secondary)] max-w-2xl mx-auto px-4">
                 Les 3 premières secondes décident de tout. Un mauvais hook vidéo = personne ne regarde.
               </p>
             </div>
@@ -147,11 +147,11 @@ function LandingContent() {
               { icon: EyeOff, text: "Ton audience ne s'arrête pas sur ton contenu" }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-[#111111] border border-white/5 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center h-full">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/5 flex items-center justify-center mb-4 sm:mb-6 text-white/80 mx-auto">
+                <div className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center h-full">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/5 flex items-center justify-center mb-4 sm:mb-6 text-[var(--text-primary)] mx-auto">
                     <item.icon size={24} className="sm:w-8 sm:h-8" strokeWidth={1.5} />
                   </div>
-                  <p className="text-sm sm:text-base md:text-lg font-semibold text-white/90 leading-snug">{item.text}</p>
+                  <p className="text-sm sm:text-base md:text-lg font-semibold text-[var(--text-primary)] leading-snug">{item.text}</p>
                 </div>
               </FadeIn>
             ))}
@@ -166,7 +166,7 @@ function LandingContent() {
       </section>
 
       {/* SOLUTION SECTION */}
-      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[#0A0A0A]">
+      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[var(--bg-primary)]">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 md:mb-20 px-4">
@@ -184,11 +184,11 @@ function LandingContent() {
             ].map((step, i) => (
               <React.Fragment key={i}>
                 <FadeIn delay={i * 0.2}>
-                  <div className="relative z-10 flex flex-col items-center text-center w-full md:max-w-[280px] bg-[#0A0A0A] p-4">
+                  <div className="relative z-10 flex flex-col items-center text-center w-full md:max-w-[280px] bg-[var(--bg-primary)] p-4">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#6C4DFF]/10 border border-[#6C4DFF]/20 flex items-center justify-center text-2xl sm:text-3xl font-bold text-[#6C4DFF] mb-4 sm:mb-6 shadow-[0_0_30px_rgba(108,77,255,0.15)]">
                       {step.num}
                     </div>
-                    <p className="text-sm sm:text-base md:text-lg font-semibold text-white/90 px-2">{step.title}</p>
+                    <p className="text-sm sm:text-base md:text-lg font-semibold text-[var(--text-primary)] px-2">{step.title}</p>
                   </div>
                 </FadeIn>
                 {i < 2 && (
@@ -203,12 +203,12 @@ function LandingContent() {
       </section>
 
       {/* EXAMPLES SECTION */}
-      <section id="examples" className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[#050505]">
+      <section id="examples" className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[var(--bg-primary)]">
         <div className="max-w-5xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">Exemples de hooks vidéos</h2>
-              <div className="inline-block bg-white/5 border border-white/10 rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm text-white/60 font-semibold">
+              <div className="inline-block bg-white/5 border border-[var(--border-color)] rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm text-[var(--text-secondary)] font-semibold">
                 Sujet : Fitness & perte de poids
               </div>
             </div>
@@ -221,8 +221,8 @@ function LandingContent() {
               "Exercice barré : Arrête de faire ça si tu veux des abdos"
             ].map((hook, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-[#111111] border-l-4 border-l-[#6C4DFF] border-y border-r border-white/5 rounded-r-xl p-4 sm:p-6 md:p-8 h-full shadow-lg">
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold leading-snug text-white/90 break-words">"{hook}"</p>
+                <div className="bg-[var(--bg-secondary)] border-l-4 border-l-[#6C4DFF] border-y border-r border-[var(--border-color)] rounded-r-xl p-4 sm:p-6 md:p-8 h-full shadow-lg">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold leading-snug text-[var(--text-primary)] break-words">"{hook}"</p>
                 </div>
               </FadeIn>
             ))}
@@ -239,7 +239,7 @@ function LandingContent() {
       </section>
 
       {/* FEATURES SECTION */}
-      <section id="features" className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[#0A0A0A]">
+      <section id="features" className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[var(--bg-primary)]">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 md:mb-20 px-4">
@@ -257,11 +257,11 @@ function LandingContent() {
               { icon: Infinity, text: "Génération illimitée (Pro)" }
             ].map((feature, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-[#111111] border border-white/5 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 flex items-center gap-3 sm:gap-4 md:gap-6 hover:border-[#6C4DFF]/30 transition-colors group">
+                <div className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 flex items-center gap-3 sm:gap-4 md:gap-6 hover:border-[#6C4DFF]/30 transition-colors group">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#6C4DFF]/10 text-[#6C4DFF] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <feature.icon size={20} className="sm:w-6 sm:h-6" />
                   </div>
-                  <p className="text-sm sm:text-base md:text-lg font-semibold text-white/90 break-words">{feature.text}</p>
+                  <p className="text-sm sm:text-base md:text-lg font-semibold text-[var(--text-primary)] break-words">{feature.text}</p>
                 </div>
               </FadeIn>
             ))}
@@ -270,7 +270,7 @@ function LandingContent() {
       </section>
 
       {/* PRICING SECTION */}
-      <section id="pricing" className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[#050505]">
+      <section id="pricing" className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-[var(--bg-primary)]">
         <div className="max-w-5xl mx-auto">
           <FadeIn>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 md:mb-20 px-4">
@@ -278,62 +278,107 @@ function LandingContent() {
             </h2>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4">
+          {/* Cartes des plans */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Free Plan */}
-            <FadeIn delay={0.1}>
-              <div className="bg-[#111111] border border-white/5 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 h-full flex flex-col">
-                <div className="inline-block bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 w-fit">
+            <FadeIn delay={0.2}>
+              <div className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-3xl p-8 h-full flex flex-col">
+                <div className="inline-block bg-white/10 text-[var(--text-secondary)] px-3 py-1 rounded-full text-sm font-semibold mb-6 w-fit">
                   Gratuit
                 </div>
-                <div className="mb-4 sm:mb-6 md:mb-8">
-                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold">0€</span>
-                  <span className="text-white/40 text-sm sm:text-base font-semibold">/mois</span>
+                <div className="mb-8">
+                  <span className="text-5xl font-bold">0 FCFA</span>
+                  <span className="text-[var(--text-secondary)] font-semibold">/mois</span>
                 </div>
-                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 md:mb-10 flex-1">
-                  <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
-                    <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
-                    <span>10 hooks par jour</span>
+                
+                {/* Features list */}
+                <ul className="space-y-4 mb-8 flex-1">
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>3 hooks par jour</span>
                   </li>
-                  <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
-                    <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
-                    <span>Plateformes principales</span>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>1 téléchargement / jour</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>Styles limités</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)] opacity-50">
+                    <Check size={20} className="text-white/20" />
+                    <span className="line-through">Variantes</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>Qualité standard</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <span className="text-red-400 font-bold">⚠️</span>
+                    <span>Watermark</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>Vitesse normale</span>
                   </li>
                 </ul>
-                <Link href="/register" className="w-full text-center block bg-transparent border border-white/20 hover:bg-white/5 text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all">
+
+                <Link 
+                  href="/register" 
+                  className="w-full text-center block bg-transparent border border-[var(--border-color)] hover:bg-white/5 text-[var(--text-primary)] py-3 rounded-xl font-bold transition-all"
+                >
                   Commencer gratuitement
                 </Link>
               </div>
             </FadeIn>
 
             {/* Pro Plan */}
-            <FadeIn delay={0.2}>
-              <div className="bg-[#111111] border-2 border-[#6C4DFF] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 h-full flex flex-col relative shadow-[0_0_40px_rgba(108,77,255,0.15)]">
-                <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 bg-[#6C4DFF] text-white px-3 sm:px-4 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg whitespace-nowrap">
+            <FadeIn delay={0.3}>
+              <div className="bg-[var(--bg-secondary)] border-2 border-[#6C4DFF] rounded-3xl p-8 h-full flex flex-col relative shadow-[0_0_40px_rgba(108,77,255,0.15)] ">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#6C4DFF] text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                   Le plus populaire
                 </div>
-                <div className="mb-4 sm:mb-6 md:mb-8 mt-4 sm:mt-6">
-                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold">9€</span>
-                  <span className="text-white/40 text-sm sm:text-base font-semibold">/mois</span>
+                <div className="mb-8 mt-2">
+                  <span className="text-5xl font-bold">5000 FCFA</span>
+                  <span className="text-[var(--text-secondary)] font-semibold">/mois</span>
                 </div>
-                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 md:mb-10 flex-1">
-                  <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
-                    <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
-                    <span>Hooks illimités</span>
+                
+                {/* Features list */}
+                <ul className="space-y-4 mb-8 flex-1">
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span><span className="font-bold text-[#6C4DFF]">30 hooks</span> par jour</span>
                   </li>
-                  <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
-                    <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
-                    <span>50+ templates</span>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span><span className="font-bold text-[#6C4DFF]">50 téléchargements</span> / mois</span>
                   </li>
-                  <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
-                    <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
-                    <span>Tous les tons disponibles</span>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>Tous les styles</span>
                   </li>
-                  <li className="flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base">
-                    <Check size={16} className="sm:w-5 sm:h-5 text-[#6C4DFF] shrink-0" />
-                    <span>Export scripts</span>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>Variantes incluses</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>Qualité haute</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>Sans watermark</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-[var(--text-primary)]">
+                    <Check size={20} className="text-[#6C4DFF]" />
+                    <span>Vitesse rapide</span>
                   </li>
                 </ul>
-                <Link href="/register" className="w-full text-center block bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all shadow-[0_0_20px_rgba(108,77,255,0.4)]">
+
+                <Link 
+                  href="/register" 
+                  className="w-full text-center block bg-[#6C4DFF] hover:bg-[#6C4DFF]/90 text-white py-3 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(108,77,255,0.4)]"
+                >
                   Passer en Pro
                 </Link>
               </div>
@@ -343,7 +388,7 @@ function LandingContent() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-gradient-to-b from-[#1A0A3D] to-[#0A0A0A] relative overflow-hidden">
+      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 bg-gradient-to-b from-[#1A0A3D] to-[var(--bg-primary)] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <FadeIn>
@@ -352,7 +397,7 @@ function LandingContent() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-[var(--text-secondary)] mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto px-4">
               Rejoins des milliers de créateurs qui cartonnent avec Hookly.
             </p>
           </FadeIn>
@@ -370,7 +415,7 @@ function LandingContent() {
 
 export default function Landing() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+    <Suspense fallback={<div className="min-h-screen bg-[var(--bg-primary)]" />}>
       <LandingContent />
     </Suspense>
   );
